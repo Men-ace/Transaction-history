@@ -11,9 +11,9 @@ const app = express()
 app.use(express.json())
 const PORT = process.env.PORT || 8000 
 
-//api endpoints 
+//api endpoints // create user endpoint | POST
 import userRouter from "./Router/userRouter.js"
-app.use("/src/v1/users", userRouter )
+app.use("/api/v1/users", userRouter )
 
 
 app.get("/",(req,res)=>{
@@ -25,11 +25,11 @@ app.get("/",(req,res)=>{
 // connect to Db 
 connectToMongoDb
 
-// Create user Route 
 
 
 
-// create user endpoint | POST
+
+
 
 
 
