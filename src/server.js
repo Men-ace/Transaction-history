@@ -1,11 +1,9 @@
 // Create express app
 import express from "express"
-import { connectToMongoDb } from "./config/dbconfig"
+import { connectToMongoDb } from "./config/dbconfig.js"
 
-// connect to mongo db 
-
-
-
+// connect to Db 
+connectToMongoDb
 // express app
 const app = express()
 app.use(express.json())
@@ -15,26 +13,11 @@ const PORT = process.env.PORT || 8000
 import userRouter from "./Router/userRouter.js"
 app.use("/api/v1/users", userRouter )
 
-
 app.get("/",(req,res)=>{
     res.json({
         message:"its live"
     })
 })
-
-// connect to Db 
-connectToMongoDb
-
-
-
-
-
-
-
-
-
-
-
 
 // run the server
 app.listen(PORT, (error)=>{

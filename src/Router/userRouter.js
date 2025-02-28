@@ -2,7 +2,7 @@ import express, { Router } from "express"
 const router = express.Router()
 
 // User Signup
-router.post("/", (req,res, next)=>{
+userRouter.post("/signup", (req,res, next)=>{
     try {
         console.log(req.body)
         res.json({
@@ -18,7 +18,9 @@ router.post("/", (req,res, next)=>{
 })
 
 // User login 
-
+userRouter.post("/login", async(req, res) =>{
+    
+})
 
 
 // User profile 

@@ -1,3 +1,6 @@
 // testing api call 
 
 GET http://localhost:8000/
+
+
+POST http://localhost:8000/signup
