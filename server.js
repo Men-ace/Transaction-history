@@ -1,6 +1,6 @@
 // Create express app
 import express from "express"
-import { connectToMongoDb } from "./config/dbconfig.js"
+import { connectToMongoDb } from "./config/dbConfig.js"
 
 // connect to Db 
 connectToMongoDb
